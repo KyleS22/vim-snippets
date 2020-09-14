@@ -132,13 +132,13 @@ def get_style(snip):
 
 def format_arg(arg, style):
 	if style == DOXYGEN:
-		return "@param %s TODO" % arg
+		return "@param %s {\% TODO \%}" % arg
 	elif style == SPHINX:
-		return ":param %s: TODO" % arg
+		return ":param %s: {\% TODO \%}" % arg
 	elif style == NORMAL:
-		return ":%s: TODO" % arg
+		return ":%s: {\% TODO \%}" % arg
 	elif style == GOOGLE:
-		return "%s (TODO): TODO" % arg
+		return "%s: {\% TODO \%}" % arg
 	elif style == JEDI:
 		return ":type %s: TODO" % arg
 	elif style == NUMPY:
@@ -147,11 +147,11 @@ def format_arg(arg, style):
 
 def format_return(style):
 	if style == DOXYGEN:
-		return "@return: TODO"
+		return "@return: {\% TODO \%}"
 	elif style in (NORMAL, SPHINX, JEDI):
-		return ":returns: TODO"
+		return ":returns: {\% TODO \%}"
 	elif style == GOOGLE:
-		return "Returns: TODO"
+		return "Returns: {\% TODO \%}"
 
 
 def write_docstring_args(args, snip):
