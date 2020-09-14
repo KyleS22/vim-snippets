@@ -147,11 +147,11 @@ def format_arg(arg, style):
 
 def format_return(style):
 	if style == DOXYGEN:
-		return "@return: {%% TODO %%}"
+		return "@return: {% TODO %}"
 	elif style in (NORMAL, SPHINX, JEDI):
-		return ":returns: {%% TODO %%}"
+		return ":returns: {% TODO %}"
 	elif style == GOOGLE:
-		return "Returns: {%% TODO %%}"
+		return "Returns: {% TODO %}"
 
 
 def write_docstring_args(args, snip):
